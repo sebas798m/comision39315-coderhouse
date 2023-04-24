@@ -1,3 +1,5 @@
+/* Variables */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -149,32 +151,47 @@ nav a {
   font-size: 50px;
   font-weight: bold;
   padding: 15px 40px 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .servicio {
   font-size: 30px;
   font-weight: bold;
   padding: 15px 40px 20px;
-  text-align: justify;
+  text-align: start;
   list-style: circle;
   font-family: "Josefin Sans", sans-serif, "Lobster", cursive, "Rampart One", cursive, "Secular One", sans-serif;
 }
 
-.container-cards {
-  margin-left: 270px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+.productos {
+  text-align: center;
+  margin-top: 2%;
+  font-family: "Merriweather", serif;
+  padding: 0 2%;
+  font-size: 40px;
+}
+@media screen and (max-width: 767px) {
+  .productos {
+    padding: 0;
+  }
 }
 
-.productos {
-  font-size: 60px;
-  font-weight: bold;
-  padding-top: 15px;
-  text-align: center;
-  font-family: "Merriweather", serif;
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .container-cards {
+    grid-template-columns: 1fr;
+    padding: 0 2%;
+  }
+}
+.container-cards .card {
+  margin-bottom: 20px;
 }
 
 /*********footer********/
@@ -259,6 +276,7 @@ footer ul {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    height: 105vh;
   }
   .icons {
     display: none;
@@ -280,7 +298,7 @@ footer ul {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    height: 80vh;
+    height: 100vh;
   }
   .icons {
     display: none;
@@ -302,7 +320,7 @@ footer ul {
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
-    height: 120vh;
+    height: 170vh;
   }
   .icons {
     display: none;
@@ -379,7 +397,7 @@ footer ul {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    height: 100vh;
+    height: 120vh;
   }
   .icons {
     display: none;
@@ -401,7 +419,7 @@ footer ul {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    height: 120vh;
+    height: 150vh;
   }
   .icons {
     display: none;
@@ -423,7 +441,7 @@ footer ul {
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
-    height: 190vh;
+    height: 270vh;
   }
   .icons {
     display: none;
@@ -433,16 +451,25 @@ footer ul {
     max-width: 768px;
     margin: 0 auto;
   }
+  .bienvenidos {
+    font-size: 50px;
+    text-align: center;
+    padding-right: 40px;
+  }
 }
 @media (max-width: 475px) {
   header {
     text-align: center;
   }
   .main-empresa {
-    height: 265vh;
+    height: 350vh;
   }
   .icons {
     display: none;
+  }
+  .bienvenidos {
+    font-size: 40px;
+    text-align: center;
   }
 }
 @media (max-width: 375px) {
@@ -453,7 +480,7 @@ footer ul {
     margin: 0 auto;
   }
   .main-empresa {
-    height: 300vh;
+    height: 460vh;
     width: 100%;
     max-width: 375px;
     margin: 0 auto;
@@ -467,112 +494,9 @@ footer ul {
     display: none;
   }
   .bienvenidos {
-    font-size: 40px;
-    text-align: justify;
-  }
-}
-@media (max-width: 1440px) {
-  header {
+    font-size: 30px;
     text-align: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .main-productos {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    height: 100vh;
-  }
-  .icons {
-    display: none;
-  }
-  footer {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 1024px) {
-  header {
-    text-align: center;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-  .main-productos {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    height: 120vh;
-  }
-  .icons {
-    display: none;
-  }
-  footer {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    text-align: center;
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
-  }
-  .main-productos {
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
-    height: 190vh;
-  }
-  .icons {
-    display: none;
-  }
-  footer {
-    width: 100%;
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 475px) {
-  header {
-    text-align: center;
-  }
-  .main-productos {
-    height: 265vh;
-  }
-  .icons {
-    display: none;
-  }
-}
-@media (max-width: 375px) {
-  header {
-    text-align: center;
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-  }
-  .main-productos {
-    height: 300vh;
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-  }
-  footer {
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-  }
-  .icons {
-    display: none;
-  }
-  .bienvenidos {
-    font-size: 40px;
-    text-align: justify;
   }
 }
 
-
+/*# sourceMappingURL=style.css.map */

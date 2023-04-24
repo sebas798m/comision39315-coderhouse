@@ -1,3 +1,15 @@
+/* Variables */
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-lobster: 'Lobster', cursive;
+$font-rampart: 'Rampart One', cursive;
+$font-secular: 'Secular One', sans-serif;
+$font-merriweather: 'Merriweather', serif;
+$productos-padding: 2%;
+$productos-max-width: 1200px;
+$productos-card-width: 300px;
+$productos-card-margin: 20px;
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -132,46 +144,50 @@
         padding-right: 40px;
         text-align: justify;
     }
-
-    $font-josefin: 'Josefin Sans', sans-serif;
-    $font-lobster: 'Lobster', cursive;
-    $font-rampart: 'Rampart One', cursive;
-    $font-secular: 'Secular One', sans-serif;
-    $font-merriweather: 'Merriweather', serif;
-
-
     .brindamos {
         font-family: $font-josefin, $font-lobster, $font-rampart;
         font-size: 50px;
         font-weight: bold;
         padding: 15px 40px 20px;
-        text-align: justify;
+        text-align:  center;
     }
     .servicio {
         font-size: 30px;
         font-weight: bold;
         padding: 15px 40px 20px;
-        text-align: justify;
+        text-align: start;
         list-style: circle;
         font-family: $font-josefin, $font-lobster, $font-rampart, $font-secular;
     }
-    
-    .container-cards {
-        margin-left: 270px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-        padding: 20px;
-    }
-    
     .productos {
-        font-size: 60px;
-        font-weight: bold;
-        padding-top: 15px;
         text-align: center;
+        margin-top: 2%;
         font-family: $font-merriweather;
+        padding: 0 $productos-padding;
+        font-size: 40px;
+        @media screen and (max-width: 767px) {
+        padding: 0;
+        }
     }
+    .container-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $productos-card-margin;
+        max-width: $productos-max-width;
+        margin: 0 auto;
     
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            padding: 0 $productos-padding;
+        }
+        .card {
+            margin-bottom: $productos-card-margin;
+        }
+    }
+
+
+
     /*********footer********/
     footer {
         background-color: #ECE8DD;
@@ -224,6 +240,7 @@
         }
     }
     
+    
     /* Grids*/
     .grid {
         display: grid;
@@ -248,6 +265,8 @@
 
 
 
+
+
     @media (max-width: 1440px) {
         header {
             text-align: center;
@@ -259,6 +278,7 @@
             width: 100%;
             max-width: 1440px;
             margin: 0 auto;
+            height: 105vh;
         }
         .icons {
             display: none;
@@ -280,7 +300,7 @@
             width: 100%;
             max-width: 1024px;
             margin: 0 auto;
-            height: 80vh;
+            height: 100vh;
         }
         .icons {
             display: none;
@@ -303,7 +323,7 @@
             width: 100%;
             max-width: 768px;
             margin: 0 auto;
-            height: 120vh;
+            height: 170vh;
         }
         .icons {
             display: none;
@@ -381,7 +401,7 @@
             width: 100%;
             max-width: 1440px;
             margin: 0 auto;
-            height: 100vh;
+            height: 120vh;
         }
         .icons {
             display: none;
@@ -404,7 +424,7 @@
             width: 100%;
             max-width: 1024px;
             margin: 0 auto;
-            height: 120vh;
+            height: 150vh;
         }
         .icons {
             display: none;
@@ -426,7 +446,7 @@
             width: 100%;
             max-width: 768px;
             margin: 0 auto;
-            height: 190vh;
+            height: 270vh;
         }
         .icons {
             display: none;
@@ -436,16 +456,25 @@
             max-width: 768px;
             margin: 0 auto;
         }
+        .bienvenidos{
+            font-size: 50px;
+            text-align:center;
+            padding-right: 40px;
+        }
     }
     @media (max-width: 475px) {
         header {
             text-align: center;
         }
         .main-empresa {
-            height: 265vh;
+            height: 350vh;
         }
         .icons {
             display: none;
+        }
+        .bienvenidos{
+            font-size: 40px;
+            text-align:center
         }
     }
 
@@ -457,7 +486,7 @@
             margin: 0 auto;
         }
         .main-empresa {
-            height: 300vh;
+            height: 460vh;
             width: 100%;
             max-width: 375px;
             margin: 0 auto;
@@ -471,113 +500,8 @@
             display: none;
         }
         .bienvenidos{
-            font-size: 40px;
-            text-align:justify
-        }
-    }
-    @media (max-width: 1440px) {
-        header {
-            text-align: center;
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-        }
-        .main-productos {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-            height: 100vh;
-        }
-        .icons {
-            display: none;
-        }
-        footer {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-        }
-    }
-
-    @media (max-width: 1024px) {
-        header {
-            text-align: center;
-            width: 100%;
-            max-width: 1024px;
-            margin: 0 auto;
-        }
-        .main-productos {
-            width: 100%;
-            max-width: 1024px;
-            margin: 0 auto;
-            height: 120vh;
-        }
-        .icons {
-            display: none;
-        }
-        footer {
-            width: 100%;
-            max-width: 1024px;
-            margin: 0 auto;
-        }
-    }
-    @media (max-width: 768px) {
-            header {
-            text-align: center;
-            width: 100%;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-        .main-productos {
-            width: 100%;
-            max-width: 768px;
-            margin: 0 auto;
-            height: 190vh;
-        }
-        .icons {
-            display: none;
-        }
-        footer {
-            width: 100%;
-            max-width: 768px;
-            margin: 0 auto;
-        }
-    }
-    @media (max-width: 475px) {
-        header {
-            text-align: center;
-        }
-        .main-productos {
-            height: 265vh;
-        }
-        .icons {
-            display: none;
-        }
-    }
-
-    @media (max-width: 375px) {
-        header {
-            text-align: center;
-            width: 100%;
-            max-width: 375px;
-            margin: 0 auto;
-        }
-        .main-productos {
-            height: 300vh;
-            width: 100%;
-            max-width: 375px;
-            margin: 0 auto;
-        }
-        footer {
-            width: 100%;
-            max-width: 375px;
-            margin: 0 auto;
-        }
-        .icons {
-            display: none;
-        }
-        .bienvenidos{
-            font-size: 40px;
-            text-align:justify
+            font-size: 30px;
+            text-align:center
         }
     }
     
