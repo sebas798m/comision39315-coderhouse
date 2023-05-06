@@ -1,4 +1,3 @@
-/* Variables */
 /* Reset */
 * {
   margin: 0;
@@ -6,7 +5,61 @@
   box-sizing: border-box;
 }
 
-/*******header*********/
+/********icons*******/
+.icons {
+  display: inline-flex;
+}
+.icons a {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  left: 1150px;
+}
+.icons a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s;
+}
+.icons a.facebook {
+  background-color: #3b5998;
+}
+.icons a.twitter {
+  background-color: #1da1f2;
+}
+.icons a.instagram {
+  background-color: #e4405f;
+}
+.icons a:hover i {
+  transform: rotate(360deg);
+}
+
+/* Grids*/
+.grid {
+  display: grid;
+  grid-template: repeat(4, 200px) repeat(4, 1fr);
+  grid-template-areas: "header" "main" "footer";
+}
+.grid header {
+  background-color: #579BB1;
+  grid-area: header;
+}
+.grid main {
+  background-color: #F8F4EA;
+  grid-area: main;
+}
+.grid footer {
+  background-color: #ECE8DD;
+  grid-area: footer;
+}
+
+/* Variables */ /*******header*********/
 header {
   background-color: #579BB1;
 }
@@ -19,7 +72,7 @@ header img {
 main {
   background-color: #F8F4EA;
   width: auto;
-  height: 70vh;
+  height: 80vh;
 }
 main .cafeteria {
   height: 350px;
@@ -38,15 +91,15 @@ main .cafeteria img {
   display: flex;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 200px;
+  padding-left: 20px;
+  justify-content: center;
 }
 .camarera img {
-  width: 600px;
-  height: 250px;
+  width: 800px;
+  height: 200px;
 }
 
 .introduccion {
-  padding-top: 100px;
   padding-left: 25px;
   padding-right: 15px;
   font-size: 35px;
@@ -163,19 +216,6 @@ nav a {
   font-family: "Josefin Sans", sans-serif, "Lobster", cursive, "Rampart One", cursive, "Secular One", sans-serif;
 }
 
-.productos {
-  text-align: center;
-  margin-top: 2%;
-  font-family: "Merriweather", serif;
-  padding: 0 2%;
-  font-size: 40px;
-}
-@media screen and (max-width: 767px) {
-  .productos {
-    padding: 0;
-  }
-}
-
 .container-cards {
   display: flex;
   flex-wrap: wrap;
@@ -194,6 +234,19 @@ nav a {
   margin-bottom: 20px;
 }
 
+.productos {
+  text-align: center;
+  margin-top: 2%;
+  font-family: "Merriweather", serif;
+  padding: 0 2%;
+  font-size: 40px;
+}
+@media screen and (max-width: 767px) {
+  .productos {
+    padding: 0;
+  }
+}
+
 /*********footer********/
 footer {
   background-color: #ECE8DD;
@@ -209,60 +262,6 @@ footer .adress {
 }
 footer ul {
   list-style: none;
-}
-
-/********icons*******/
-.icons {
-  display: inline-flex;
-}
-.icons a {
-  display: inline-block;
-  position: relative;
-  margin: 0 10px;
-  width: 60px;
-  height: 60px;
-  color: #fff;
-  font-size: 20px;
-  text-decoration: none;
-  left: 1150px;
-}
-.icons a i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s;
-}
-.icons a.facebook {
-  background-color: #3b5998;
-}
-.icons a.twitter {
-  background-color: #1da1f2;
-}
-.icons a.instagram {
-  background-color: #e4405f;
-}
-.icons a:hover i {
-  transform: rotate(360deg);
-}
-
-/* Grids*/
-.grid {
-  display: grid;
-  grid-template: repeat(4, 200px) repeat(4, 1fr);
-  grid-template-areas: "header" "main" "footer";
-}
-.grid header {
-  background-color: #579BB1;
-  grid-area: header;
-}
-.grid main {
-  background-color: #F8F4EA;
-  grid-area: main;
-}
-.grid footer {
-  background-color: #ECE8DD;
-  grid-area: footer;
 }
 
 @media (max-width: 1440px) {
@@ -484,6 +483,183 @@ footer ul {
     width: 100%;
     max-width: 375px;
     margin: 0 auto;
+  }
+  footer {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .icons {
+    display: none;
+  }
+  .bienvenidos {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 1440px) {
+  header {
+    text-align: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .main-index {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 120vh;
+  }
+  .camarera {
+    margin: auto;
+    height: 350px;
+    padding-right: 20px;
+  }
+  .camarera img {
+    width: 100%;
+    height: 100%;
+  }
+  .introduccion {
+    text-align: justify;
+    text-align: center;
+    margin: 0%;
+  }
+  .icons {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    text-align: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .main-index {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 150vh;
+  }
+  .camarera {
+    margin: auto;
+    height: 350px;
+    padding-right: 20px;
+  }
+  .camarera img {
+    width: 100%;
+    height: 100%;
+  }
+  .introduccion {
+    text-align: justify;
+    text-align: center;
+    margin: 0%;
+  }
+  .icons {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .main-index {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    height: 270vh;
+  }
+  .camarera {
+    margin: auto;
+    padding-right: 20px;
+  }
+  .camarera img {
+    width: 100%;
+    height: 200px;
+  }
+  .introduccion {
+    text-align: justify;
+    text-align: center;
+    margin: 0%;
+  }
+  .icons {
+    display: none;
+  }
+  footer {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .bienvenidos {
+    font-size: 50px;
+    text-align: center;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 475px) {
+  header {
+    text-align: center;
+  }
+  .main-index {
+    height: 350vh;
+  }
+  .camarera img {
+    width: 430px;
+    height: 200px;
+  }
+  .introduccion {
+    text-align: justify;
+    text-align: center;
+    margin: 0%;
+  }
+  .icons {
+    display: none;
+  }
+  .bienvenidos {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  header {
+    text-align: center;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .main-index {
+    height: 460vh;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+  .camarera {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+  .camarera img {
+    width: 330px;
+    height: 200px;
+  }
+  .introduccion {
+    text-align: justify;
+    text-align: center;
+    margin: 0%;
   }
   footer {
     width: 100%;

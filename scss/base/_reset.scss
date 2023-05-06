@@ -1,0 +1,73 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/********icons*******/
+.icons {
+    display: inline-flex;
+
+    a {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        width: 60px;
+        height: 60px;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        left: 1150px;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s;
+        }
+
+        &.facebook {
+            background-color: #3b5998;
+        }
+
+        &.twitter {
+            background-color: #1da1f2;
+        }
+
+        &.instagram {
+            background-color: #e4405f;
+        }
+
+        &:hover i {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+/* Grids*/
+.grid {
+    display: grid;
+    grid-template: repeat(4, 200px) repeat(4, 1fr);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    header {
+        background-color: #579BB1;
+        grid-area: header;
+    }
+
+    main {
+        background-color: #F8F4EA;
+        grid-area: main;
+    }
+
+    footer {
+        background-color: #ECE8DD;
+        grid-area: footer;
+    }
+}

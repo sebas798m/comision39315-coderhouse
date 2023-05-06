@@ -1,0 +1,185 @@
+/*******main***********/
+main {
+    background-color: #F8F4EA;
+    width: auto;
+    height: 80vh;
+
+    .cafeteria {
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.camarera {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    justify-content: center;
+
+    img {
+        width: 800px;
+        height: 200px;
+
+    }
+}
+
+.introduccion {
+
+    padding-left: 25px;
+    padding-right: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.text1 {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    right: 10px;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+}
+
+.text2 {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 30px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #ECE8DD;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        padding: 0 10px;
+
+        li {
+            display: inline-block;
+            position: relative;
+            transition: 0.3s linear;
+            z-index: 1000;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 20px;
+        font-weight: bold;
+    }
+}
+
+.contactoo {
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.datos {
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.complemento {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.respuesta {
+    font-size: 18px;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.bienvenidos {
+    font-size: 60px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.historia {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    text-align: justify;
+}
+
+.brindamos {
+    font-family: $font-josefin, $font-lobster, $font-rampart;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 15px 40px 20px;
+    text-align: center;
+}
+
+.servicio {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 40px 20px;
+    text-align: start;
+    list-style: circle;
+    font-family: $font-josefin, $font-lobster, $font-rampart, $font-secular;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $productos-card-margin;
+    max-width: $productos-max-width;
+    margin: 0 auto;
+
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
+        padding: 0 $productos-padding;
+    }
+
+    .card {
+        margin-bottom: $productos-card-margin;
+    }
+}
+
+.productos {
+    text-align: center;
+    margin-top: 2%;
+    font-family: $font-merriweather;
+    padding: 0 $productos-padding;
+    font-size: 40px;
+
+    @media screen and (max-width: 767px) {
+        padding: 0;
+    }
+}
